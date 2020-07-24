@@ -79,13 +79,14 @@ for (i, box) in enumerate(box):
             makeup.line(points[i:j], fill=(150, 0, 0, 64), width=8)
             makeup.line(points[i:j], fill=(150, 0, 0, 64), width=8)
         
-        # Apply eyeliner
+        # Apply eyeliner to left eye
         if face_landmarks == "left_eye":
             makeup.line(points[i:j] + points[i:j][0], fill=(0, 0, 0, 110), width=6)
     
+	# Apply eyeliner to left eye
         if face_landmarks == "right_eye":
             makeup.line(points[i:j] + points[i:j][0], fill=(0, 0, 0, 110), width=6)
             
     # Show and save the image in the working directory       
     image_pil.show()
-#image_pil.save("output\output_image.jpg")
+image_pil.save("output\output_image.jpg")
